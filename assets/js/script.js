@@ -29,6 +29,7 @@ function generatePassword() {
 // PASSWORD LENGTH CONDITIONS
     if (!passwordLength) {
         alert("You need to input a value.");
+        return "Error";
     } else if (passwordLength < 8 || passwordLength > 128) {
         passwordLength = parseInt(prompt("You must choose between 8 and 128 characters."));
     } else {
@@ -36,7 +37,7 @@ function generatePassword() {
         confirmSymbol = confirm("Do you want to include symbols?");
         confirmUppercase = confirm("Do you want to include uppercase letters?");
         confirmLowercase = confirm("Do you want to include lowercase letters?");
-    };
+    }; 
 
 // CONDITIONS FOR EVERY COMBINATION
     if (!confirmSymbol && !confirmNumber && !confirmUppercase && !confirmLowercase) {
